@@ -1,0 +1,30 @@
+.fonctionnement-card{
+    display: flex;
+    margin: 0 25px;
+    align-items: center;
+    width: 325px;
+    height: 75px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.5s;
+    .chiffre{
+        color: white;
+        background-color: $main-color;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        padding-left: 7px;
+        padding-top: 2px;
+        margin-left: -11px;
+    }
+    i{
+        color: rgb(126, 126, 126);
+        margin-inline: 20px;
+    }
+    &:hover{
+        background-color: rgb(245, 237, 255);
+        i{
+            color: $main-color;
+        }
+    } 
+}
