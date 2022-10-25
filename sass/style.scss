@@ -1,4 +1,6 @@
 $main-color: #9356DC;
+$secondaire: #99E2D0;
+
 
 *{
     box-sizing: border-box;
@@ -11,16 +13,35 @@ img{
     object-fit: cover;
 }
 
+.upper{
+    text-transform: uppercase;
+}
+
 a{
     display: block;
     text-decoration: none;
     color: inherit;
 }
 
+.bouton-rose{
+    margin: 30px auto;
+    height: 50px;
+    width: 220px;
+    border-radius: 25px;
+    border: transparent;
+    background: linear-gradient(#FF79DA, #9356DC);
+    color: white;
+    font-size: 16px;
+    display: block
+}
+
 @import "./fonts";
 @import "./fonctionnement";
 @import "./restaurant";
 @import "./composants/favoris";
+@import "./menus";
+@import "./composants/plats";
+@import "./composants/loader";
 
 header{
     height: 60px;
@@ -69,16 +90,7 @@ header{
         font-size: 18px;
         color: rgb(53, 53, 53);
     }
-    button{
-        margin: 30px 0;
-        height: 50px;
-        width: 220px;
-        border-radius: 25px;
-        border: transparent;
-        background: linear-gradient(#FF79DA, #9356DC);
-        color: white;
-        font-size: 16px;
-    }
+    
 }
 #restaurants{
     max-width: 1400px;
@@ -95,4 +107,13 @@ header{
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+footer{
+    background-color: rgb(53, 53, 53);
+    color: white;
+    padding: 20px;
+    h2{
+        font-family: 'Shrikhand', cursive;
+    }
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Shrikhand&display=swap");
 * {
   box-sizing: border-box;
@@ -11,10 +12,26 @@ img {
      object-fit: cover;
 }
 
+.upper {
+  text-transform: uppercase;
+}
+
 a {
   display: block;
   text-decoration: none;
   color: inherit;
+}
+
+.bouton-rose {
+  margin: 30px auto;
+  height: 50px;
+  width: 220px;
+  border-radius: 25px;
+  border: transparent;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  font-size: 16px;
+  display: block;
 }
 
 * {
@@ -171,6 +188,246 @@ h1 {
   opacity: 0;
 }
 
+.header-flex {
+  justify-content: space-between !important;
+  width: 100%;
+  align-items: center;
+  padding-top: 0;
+}
+.header-flex a {
+  margin-left: 20px;
+}
+
+@-webkit-keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+main {
+  width: 100%;
+  min-height: calc(100vh - 230px);
+  background-color: rgb(247, 247, 247);
+}
+main .cover {
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 260px;
+}
+main .menu {
+  background-color: rgb(247, 247, 247);
+  transform: translateY(-40px);
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+main .menu .titre {
+  justify-content: space-between;
+  max-width: 1090px;
+  padding-top: 30px;
+  margin: auto;
+}
+main .menu .titre h2 {
+  font-weight: 200;
+  font-size: 1.7em;
+  font-family: "Shrikhand", cursive;
+}
+main .menu .titre h2 span {
+  font-family: "Shrikhand", cursive;
+}
+main .menu .titre .favoris {
+  font-size: 25px;
+  top: 5px;
+}
+main .menu button {
+  margin-bottom: 0;
+}
+
+#note-anchantée {
+  background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+
+.choix {
+  flex-wrap: wrap;
+  max-width: 1120px;
+  margin: auto;
+}
+.choix h3 {
+  margin-top: 40px;
+  margin-left: 20px;
+  font-size: 16px;
+  font-weight: 100;
+}
+.choix .ligne-verte {
+  width: 40px;
+  border-bottom: 3px solid #99E2D0;
+  margin: 5px 0 10px 20px;
+}
+.choix .plat {
+  height: 70px;
+  width: 350px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 3px 3px 5px grey;
+  overflow: hidden;
+  display: flex;
+  opacity: 0;
+  -webkit-animation: apparition 1s ease-in-out forwards;
+          animation: apparition 1s ease-in-out forwards;
+}
+.choix .plat i {
+  transition: transform 0.5s ease-in-out;
+  transform: rotate(180deg);
+}
+.choix .plat .check-container {
+  height: inherit;
+  width: 0px;
+  background-color: #99E2D0;
+  color: white;
+  display: grid;
+  place-content: center;
+  transition: width 0.5s ease-in-out;
+}
+.choix .plat .detail-menu {
+  width: 100%;
+  transition: width 0.5s ease-in-out;
+  padding: 10px;
+}
+.choix .plat .detail-menu h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.choix .plat .container-flex {
+  justify-content: space-between;
+  margin-top: 10px;
+  flex-wrap: nowrap;
+}
+.choix .plat .container-flex .description {
+  font-size: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.choix .plat .container-flex .prix {
+  font-weight: bold;
+}
+.choix .plat:hover .check-container {
+  width: 60px;
+}
+.choix .plat:hover .detail-menu {
+  width: calc(100% - 60px);
+}
+.choix .plat:hover i {
+  transform: rotate(360deg);
+}
+.choix .plat:nth-child(1) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.choix .plat:nth-child(2) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.choix .plat:nth-child(3) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+/* making loader animation */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  overflow: hidden;
+  z-index: 99;
+  display: grid;
+  place-content: center;
+  -webkit-animation: disparaitre 1s;
+          animation: disparaitre 1s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-right: 5px solid rgb(224, 13, 13);
+  border-left: 5px solid rgb(23, 194, 7);
+  -webkit-animation: rotation 1s ease-in-out 5;
+          animation: rotation 1s ease-in-out 5;
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes disparaitre {
+  0% {
+    opacity: 1;
+    height: 100vh;
+    z-index: 2;
+  }
+  75% {
+    opacity: 0;
+    height: 100vh;
+    z-index: -1;
+  }
+  100% {
+    opacity: 0;
+    height: 0;
+    z-index: -1;
+  }
+}
+@keyframes disparaitre {
+  0% {
+    opacity: 1;
+    height: 100vh;
+    z-index: 2;
+  }
+  75% {
+    opacity: 0;
+    height: 100vh;
+    z-index: -1;
+  }
+  100% {
+    opacity: 0;
+    height: 0;
+    z-index: -1;
+  }
+}
 header {
   height: 60px;
   padding-top: 15px;
@@ -219,16 +476,6 @@ header h1 {
   font-size: 18px;
   color: rgb(53, 53, 53);
 }
-#explorer button {
-  margin: 30px 0;
-  height: 50px;
-  width: 220px;
-  border-radius: 25px;
-  border: transparent;
-  background: linear-gradient(#FF79DA, #9356DC);
-  color: white;
-  font-size: 16px;
-}
 
 #restaurants {
   max-width: 1400px;
@@ -245,4 +492,13 @@ header h1 {
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+footer {
+  background-color: rgb(53, 53, 53);
+  color: white;
+  padding: 20px;
+}
+footer h2 {
+  font-family: "Shrikhand", cursive;
 }/*# sourceMappingURL=style.css.map */
