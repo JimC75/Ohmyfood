@@ -15,7 +15,7 @@
     .fa-regular.fa-heart{
         z-index: 5;
         color:black;
-        transition: opacity 1.5s ease-in-out;
+        transition: opacity 1s ease-in-out;
     }
     .fa-square-full{
         z-index: 3;
@@ -28,15 +28,15 @@
         color: transparent;
         background-clip: text;
         -webkit-background-clip: text;
-        background-image: linear-gradient(#e66465, #9198e5);
+        background-image: linear-gradient($secondaire, $main-color);
         z-index: 1;
     }
     
     .rideau {
         color: white;
         height: 15px;
-        transition: top 2s;
-        transition-timing-function: ease-in-out;
+        transition: top 1s;
+        transition-timing-function: ease-out;
     }
     
     &:hover .rideau{

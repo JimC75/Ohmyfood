@@ -1,5 +1,6 @@
 $main-color: #9356DC;
-$secondaire: #99E2D0;
+$secondaire: #FF79DA;
+$tertiaire: #99E2D0;
 
 
 *{
@@ -29,10 +30,17 @@ a{
     width: 220px;
     border-radius: 25px;
     border: transparent;
-    background: linear-gradient(#FF79DA, #9356DC);
+    background: linear-gradient($secondaire, $main-color);
     color: white;
     font-size: 16px;
     display: block
+}
+
+.container-flex{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 @import "./fonts";
@@ -92,6 +100,8 @@ header{
     }
     
 }
+
+
 #restaurants{
     max-width: 1400px;
     margin: auto;
@@ -100,20 +110,33 @@ header{
         width: 80%;
         text-align: left;
     }
-    
+    .container-flex{
+        justify-content: space-around;
+    }
 }
-.container-flex{
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+
 
 footer{
     background-color: rgb(53, 53, 53);
     color: white;
     padding: 20px;
-    h2{
-        font-family: 'Shrikhand', cursive;
+    .full-foot{
+        flex-direction: column;
+        justify-content: flex-start;
+        .foot-title{
+            h2{
+                font-family: 'Shrikhand', cursive;
+                font-size: 18px;
+                font-weight: 200;
+            }
+        }
+        .foot-text{
+            gap: 10px;
+            justify-content: space-between;
+            .link{
+                justify-content: flex-start;
+                width: 200px;
+            }
+        }
     }
 }

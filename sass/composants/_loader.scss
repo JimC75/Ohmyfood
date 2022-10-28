@@ -22,9 +22,9 @@
     height: 100px;
     border-radius: 50%;
     border: 5px solid transparent;
-    border-right: 5px solid rgb(224, 13, 13);
-    border-left: 5px solid rgb(23, 194, 7);
-    animation: rotation 1s ease-in-out 5;
+    border-right: 5px solid $main-color;
+    border-left: 5px solid $secondaire;
+    animation: rotation 1s ease-in-out 3;
 }
 
 @keyframes rotation {

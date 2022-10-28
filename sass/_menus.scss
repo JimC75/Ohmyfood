@@ -5,6 +5,13 @@
     padding-top: 0;
     a{
         margin-left: 20px;
+        i{
+            font-size: 20px;
+        }
+    }
+    h1{
+        font-weight: 200;
+        font-size: 30px;
     }
 }
 
@@ -36,7 +43,7 @@ main{
         .titre{
             justify-content: space-between;
             max-width: 1090px;
-            padding-top: 30px;
+            padding: 30px 20px;
             margin: auto;
             h2{
                 font-weight: 200;
@@ -55,8 +62,4 @@ main{
             margin-bottom: 0;
         }
     }
-}
-
-#note-anchantée{
-    background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
 }
