@@ -51,6 +51,16 @@ a{
 @import "./composants/plats";
 @import "./composants/loader";
 
+button{
+    transition: box-shadow .5s ease-in-out, opacity .3s ease-in-out;
+}
+
+button:hover{
+    opacity: .9;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px grey;
+}
+
 header{
     height: 60px;
     padding-top: 15px;
@@ -101,13 +111,28 @@ header{
     
 }
 
+#fonctionnement{
+    background-color: white;
+    padding: 40px 0;
+    .container-fonctionnement{
+        max-width: 1400px;
+        margin: auto;
+    }
+    h2{
+        margin-left: 20px;
+        margin-bottom: 30px;
+    }
+}
+
 
 #restaurants{
     max-width: 1400px;
     margin: auto;
+    padding: 40px 0;
+    background-color: rgb(247, 247, 247);
     h2{
         margin: auto;
-        width: 80%;
+        margin: 0 0 30px 20px;
         text-align: left;
     }
     .container-flex{
